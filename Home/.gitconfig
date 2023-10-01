@@ -1,0 +1,23 @@
+[safe]
+	directory = /d-drive/projects/AliucordPlugins
+	directory = /mnt/d-drive/projects/xero-dracul-git
+	directory = /d-drive/projects/hentaifetch
+	directory = /d-drive/projects/Unscramble
+	directory = /d-drive/projects/config-backup-2023.08.30-20.13.54
+[user]
+	email = quincynyan@gmail.com
+	name = Quincy Nyan
+[core]
+	autocrlf = input
+	editor = code
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[credential]
+	credentialStore = secretservice
+	helper = cache --timeout 7200
+	helper = oauth

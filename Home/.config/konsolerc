@@ -1,0 +1,23 @@
+[Desktop Entry]
+DefaultProfile=XeroDracul.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+1920x1080 screen: Height=506
+1920x1080 screen: Width=897
+1920x1080 screen: XPosition=334
+1920x1080 screen: YPosition=336
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAAAAAAAAPwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAA/////wAAAWQA////+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABAgD///8AAAOBAAAB+gAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+
+[TabBar]
+CloseTabOnMiddleMouseButton=true
+NewTabButton=true
+
+[UiSettings]
+ColorScheme=

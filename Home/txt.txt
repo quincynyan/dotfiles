@@ -1,0 +1,297 @@
+localectl list-keymaps
+
+q
+
+clear
+
+localectl list-keymaps | grep en
+
+loadkeys en
+
+clear
+
+iwctl
+
+device list
+
+station wlan0 scan
+
+station wlan0 get-networks
+
+station wlan0 connect "U Myat Htut - 5G"
+
+1967htut
+
+exit
+
+clear
+
+timedatectl set-netp true
+
+pacman -Syyy
+
+clear
+
+lsblk
+
+cfdisk /dev/nvme0n1
+
+↓↓↓↓↵
+
+4G
+
+↵
+
+→→→→↵
+
+yes
+
+←←←←↵
+
+clear
+
+lsblk
+
+mkfs.ext4 /dev/nvme0n1p7
+
+y
+
+clear
+
+lsblk
+
+mount /dev/nvme0n1p7 /mnt
+
+mkdir /mnt/boot
+
+mkdir /mnt/boot/efi
+
+mount /dev/nvme0n1p1 /mnt/boot/efi
+
+mkdir /mnt/windows10
+
+mount /dev/nvme0n1p3 /mnt/windows10
+
+mkdir /mnt/d-drive
+
+mount /dev/nvme0n1p5 /mnt/d-drive
+
+clear
+
+lsblk
+
+pacstrap /mnt base linux linux-firmware nano intel-ucode
+
+clear
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+cat /mnt/etc/fstab
+
+clear
+
+arch-chroot /mnt
+
+clear
+
+timedate-ctl list-timezones
+
+timedate-ctl
+
+exit
+
+timedate-ctl
+
+timedate-ctl list-timezones
+
+q
+
+timedate-ctl list-timezones | grep Yangon
+
+ln -sf /usr/share/zoneinfo/Asia/Yangon /etc/localtime
+
+hwclock --systohc
+
+nano /etc/locale.gen
+
+en_US.UTF-8 UTF-8
+
+^X
+
+Y
+
+↵
+
+locale-gen
+
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+
+echo "KEYMAP=en" >> /etc/vconsole.conf
+
+clear
+
+nano /etc/hostname
+
+quincpc
+
+^X
+
+Y
+
+↵
+
+nano /etc/hosts
+
+↓↓
+
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	quincpc.localdomain	quincpc
+
+^X
+
+Y
+
+↵
+
+passwd
+
+Transrights.33
+
+Transrights.33
+
+clear
+
+pacman -S grub efibootmgr os-prober ntfs-3g networkmanager network-manager-applet wireless_tools wpa_supplicant dialog mtools dosfstools base-devel linux-headers git bluez bluez-utils pulseaudio-bluetooth cups openssh
+
+Y
+
+clear
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+nano /etc/default/grub
+
+GRUB_DISABLE_OS_PROBER=false
+
+^X
+
+Y
+
+↵
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+clear
+
+systemctl enable NetworkManager
+
+systemctl enable bluetooth
+
+systemctl enable org.cups.cupsd
+
+systemctl enable cups
+
+systemctl enable sshd
+
+clear
+
+useradd -mG wheel quincy
+
+passwd quincy
+
+Transrights.33
+
+Transrights.33
+
+EDITOR=nano visudo
+
+wheel ALL=(ALL) ALL
+
+^X
+
+Y
+
+↵
+
+clear
+
+exit
+
+umount -a
+
+reboot
+
+quincy
+
+Transrights.33
+
+clear
+
+nmtui
+
+↓↵
+
+[ESC]
+
+clear
+
+sudo pacman -S nvidia nvidia-utils
+
+clear
+
+sudo pacman -S xorg
+
+↵↵↵
+
+clear
+
+sudo pacman -S sddm
+
+↵↵
+
+clear
+
+sudo systemctl enable sddm
+
+clear
+
+sudo pacman -S plasma kde-applications packagekit-qt5
+
+↵↵↵↵↵↵↵↵↵
+
+clear
+
+sudo pacman -S libreoffice firefox
+
+↵↵
+
+clear
+
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+
+makepkg -si PKGBUILD
+
+↵↵
+
+clear
+
+cd
+
+clear
+
+yay -S ttf-ms-fonts
+
+A
+
+N
+
+↵
+
+clear
+
+rebootr

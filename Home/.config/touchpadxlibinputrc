@@ -1,0 +1,4 @@
+[DELL0979:00 04F3:30C4 Touchpad]
+clickMethodAreas=false
+clickMethodClickfinger=true
+tapToClick=true
