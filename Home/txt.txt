@@ -156,9 +156,9 @@ Y
 
 passwd
 
-Transrights.33
+aVerySafePassword
 
-Transrights.33
+aVerySafePassword
 
 clear
 
@@ -202,9 +202,9 @@ useradd -mG wheel quincy
 
 passwd quincy
 
-Transrights.33
+aVerySafePassword
 
-Transrights.33
+aVerySafePassword
 
 EDITOR=nano visudo
 
@@ -226,7 +226,7 @@ reboot
 
 quincy
 
-Transrights.33
+aVerySafePassword
 
 clear
 
